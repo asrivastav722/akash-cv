@@ -13,8 +13,8 @@ export const portfolioData = {
   },
   skills: {
     mobileAndFrontend: [
-      { title: "Frameworks & Core", list: ["React Native", "Expo (EAS CLI, Prebuild)", "Next.js", "React", "TypeScript", "JavaScript (ESNext)"], percentage: 98 },
-      { title: "State Management & Data Flow", list: ["Redux Toolkit", "Zustand", "Context API", "React Query (TanStack Query)"], percentage: 95 },
+      { title: "Frameworks & Core", list: ["React Native", "Expo (EAS CLI, Prebuild)", "Next.js", "React", "TypeScript", "JavaScript (ESNext)"], percentage: 80 },
+      { title: "State Management & Data Flow", list: ["Redux Toolkit", "Context API", "React Query (TanStack Query)"], percentage: 80 },
       { title: "Styling & UI Systems", list: ["Tailwind CSS", "NativeWind", "Styled Components", "Framer Motion", "CSS Modules"], percentage: 96 },
       { title: "Performance & Optimization", list: ["Metro Bundler configuration", "Hermes engine optimization", "Lazy loading", "Memory leak profiling", "Image caching pipelines"], percentage: 90 },
       { title: "Testing & Quality Assurance", list: ["Jest", "React Native Testing Library", "Detox (E2E testing)", "ESLint", "Prettier"], percentage: 88 },
@@ -42,22 +42,57 @@ export const portfolioData = {
   },
   experience: [
     {
-      role: "Lead Mobile Software Engineer",
-      company: "Fixr & ElectroStore Systems",
-      period: "2024 – Present",
+        role: "Founder & Lead IT Solutions Architect",
+        company: "Electrolyte Solutions and Ecosystem (Fixr and Aris)",
+        location: "India / Remote",
+        period: "Feb,2024  – Present",
+        ctc: "Varies (Entrepreneurial / Client Contracts)",
+        employmentType: "Founder / Full-time",
+        highlights: [
+          "Founded and scaled a comprehensive IT enterprise delivering on-site hardware repairs, doorstep computer/laptop services, and end-to-end custom software and website development for clients.",
+          "Architected and launched proprietary products including the Fixr Service Marketplace app (React Native/Expo/Node.js), Electrolyte Solutions ERP & E-Commerce suite, and ARIS AI IoT device gateway.",
+          "Engineered bespoke client websites, web applications, and automated backend systems tailored to business operational needs and e-commerce growth.",
+          "Managed full-stack mobile app deployments via Google Play Console, EAS CLI workflows, self-hosted Linux/Docker servers, and CI/CD automation pipelines.",
+          "Provided advanced hardware troubleshooting, diagnostics, and technical consulting for diverse enterprise and consumer clients."
+        ]
+      },
+    {
+      role: "Lead Software Engineer",
+      company: "Cyberoze Pvt.Ltd. (Showstage)",
+      location: "India (Hybrid / Remote)",
+      period: "June,24 – Feb,25",
+      ctc: "2.4 L",
+      employmentType: "Full-time",
       highlights: [
-        "Architected and executed closed testing cycles and production readiness for Android mobile applications connecting users with technicians.",
-        "Configured Expo Application Services (EAS) CLI workflows, local release keystores, and Metro bundler optimization under WSL environments.",
-        "Optimized booking flows, push notification delivery pipelines, and UI stability, driving high user retention during beta releases."
+        "Promoted from Frontend Developer to Lead Software Engineer, spearheading the full-stack design and delivery of the Showstage talent marketplace ecosystem.",
+        "Engineered and deployed a multi-platform architecture comprising a native Android APK (WebView wrapper) distributed via Google Play Console, a React-powered CMS admin dashboard, and a dynamic React client application.",
+        "Built a high-performance Next.js production marketing website and a scalable Node.js/Express backend integrated with MongoDB, JWT authentication, OAuth, and secure REST APIs.",
+        "Integrated Razorpay payment gateway workflows and managed complex Redux state management for seamless artist and employer bookings.",
+        "Configured automated CI/CD pipelines using CircleCI and GitHub Actions with Bootstrap and Tailwind CSS for rapid and reliable releases."
       ]
     },
     {
-      role: "Systems & Automation Developer",
-      company: "Independent Engineering & Hardware Labs",
-      period: "2022 – 2024",
+      role: "Frontend Engineer",
+      company: "Cyberoze Pvt.Ltd. (Go4Explore)",
+      location: "Noida, UP",
+      period: "Nov,2024 – May,2025",
+      ctc: "1.2 L",
+      employmentType: "Full-time",
       highlights: [
-        "Engineered custom Bash automation scripts and wireless ADB/scrcpy pipelines to streamline mobile hardware testing and diagnostics.",
-        "Performed component-level troubleshooting, DC voltage testing, and display driver circuit modifications for mobile devices."
+        "Developed high-performance, responsive user interfaces using React, Next.js, and modern CSS frameworks.",
+        "Collaborated closely with backend developers to integrate REST APIs, optimize page load performance, and ensure seamless cross-browser compatibility."
+      ]
+    },
+    {
+      role: "Independent Freelance Software & Hardware Engineer",
+      company: "Freelance / Contract",
+      location: "Remote / On-Site",
+      period: "2022 – 2024",
+      ctc: null,
+      employmentType: "Contractor",
+      highlights: [
+        "Delivered custom web and mobile applications for local clients and bussinesses, focusing on React JS, Tailwind CSS and responsive UI/UX design.",
+        "Performed specialized component-level troubleshooting, DC voltage testing, and display driver circuit modifications for mobile devices and custom hardware clients."
       ]
     }
   ],
@@ -98,7 +133,7 @@ export const portfolioData = {
     name: "Electrolyte Solutions ERP & E-Commerce Suite",
     description: "A comprehensive, proprietary enterprise resource planning (ERP) and e-commerce ecosystem built for internal enterprise operations and digital sales. Features a custom full-stack administrative management portal, an advanced React Native mobile e-commerce client, and deeply integrated Shopify backend infrastructure handling automated inventory tracking, order processing, and customer relationship management.",
     logoUrl: "https://www.electrolytesolutions.in/Electrolyte.png",
-    techStack: ["React Native", "React.js", "Node.js", "Node.js", "Shopify", "Tailwind CSS", "PostgreSQL","Google Play Console","Google Cloud Console","Supabase","CI/CD", "Self Hosted Home Server", "Docker","Domain Management","Vercel","NativeWind","ADB","Linux","Razorpay Payment Integration","Liquid - Shopify","SEO","Google Bussiness Setup", ],
+    techStack: ["Shopify","CORS","RESTAPIs","GraphQL","Supabase","CI/CD", "Self Hosted Home Server", "NativeWind","ADB","Liquid - Shopify","SEO",  "Tailwind CSS", "PostgreSQL","Google Play Console","Google Cloud Console", "Docker","Domain Management", "Vercel","Linux","Google Bussiness Setup","MongoDB","QRCodes","Razorpay Payment Integration"],
     links: [
       { label: "Company Portal", url: "https://www.electrolytesolutions.in/Electrolyte.png" },
       { label: "Admin ERP", url: "https://admin.electrolytesolutions.com" }
@@ -109,11 +144,11 @@ export const portfolioData = {
     name: "ARIS AI Ecosystem & Device Gateway",
     description: "An advanced real-time IoT and AI ecosystem connecting physical hardware devices with intelligent cloud backends. Engineered a high-performance Python client running on edge devices communicating via secure WebSockets, paired with a responsive web frontend client for live device telemetry, AI command dispatch, and real-time state synchronization.",
     logoUrl: "/projects/aris.png",
-    techStack: ["Python", "WebSockets", "Node.js", "AI / LLM Integration", "React", "Next.js", "IoT Protocols"],
-    links: [
-      { label: "Live System", url: "https://aris-ai.com" },
-      { label: "Documentation", url: "https://docs.aris-ai.com" }
-    ],
+    techStack: ["GORK-SDK","Python", "WebSockets", "Node.js", "AI / LLM Integration", "React", "Next.js", "IoT Protocols","Mongoose","SSL","OS","llama-3.3-70b-versatile"],
+    // links: [
+    //   { label: "Live System", url: "https://aris-ai.com" },
+    //   { label: "Documentation", url: "https://docs.aris-ai.com" }
+    // ],
     status:"Ongoing"
   }
 ],

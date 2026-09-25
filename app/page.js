@@ -243,6 +243,26 @@ export default function Portfolio() {
                     {exp.period}
                   </span>
                 </div>
+
+                {/* Additional Job Details: Location, Employment Type & CTC */}
+                <div className="flex flex-wrap gap-2 mb-6 pb-4 border-b border-white/5 font-mono text-[11px] text-neutral-400">
+                  {exp.location && (
+                    <span className="px-2 py-0.5 bg-white/5 border border-white/10 rounded">
+                      📍 {exp.location}
+                    </span>
+                  )}
+                  {exp.employmentType && (
+                    <span className="px-2 py-0.5 bg-white/5 border border-white/10 rounded">
+                      💼 {exp.employmentType}
+                    </span>
+                  )}
+                  {exp.ctc && (
+                    <span className="px-2 py-0.5 bg-white/5 border border-white/10 rounded text-neutral-300">
+                      💰 CTC: {exp.ctc}
+                    </span>
+                  )}
+                </div>
+
                 <ul className="space-y-2 text-neutral-300 text-xs sm:text-sm font-light">
                   {exp.highlights.map((item, i) => (
                     <li key={i} className="flex items-start gap-2.5">
@@ -257,7 +277,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
       {/* Projects Section */}
       <section id="projects" className="py-24 border-t border-white/10 bg-neutral-950/50">
         <div className="max-w-6xl mx-auto px-6">
@@ -483,26 +502,70 @@ export default function Portfolio() {
       {/* Project Detail Modal */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="bg-black border border-white/15 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative">
+          <div className="bg-black border border-white/15 rounded-2xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
             <button 
               onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 text-neutral-400 hover:text-white p-2"
+              className="absolute top-4 right-4 text-neutral-400 hover:text-white p-2 rounded-lg bg-white/5 border border-white/10 transition"
             >
               <X className="w-4 h-4" />
             </button>
-            <h3 className="text-xl font-bold text-white mb-2">{selectedProject.name}</h3>
-            <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-6 font-light">{selectedProject.description}</p>
-            <div className="flex gap-3">
-              <a
-                href="/resume"
-                target="_blank"
-                className="flex-1 py-2.5 bg-white text-center text-black rounded-lg font-mono text-xs font-bold hover:bg-neutral-200 transition"
-              >
-                View in Resume
-              </a>
+
+            {/* Modal Header with Logo & Title */}
+            <div className="flex items-center gap-3.5 mb-4 pr-10">
+              {selectedProject.logoUrl && (
+                <div className="w-12 h-12 rounded-xl bg-neutral-900 border border-white/10 overflow-hidden flex items-center justify-center p-2 flex-shrink-0">
+                  <img 
+                    src={selectedProject.logoUrl} 
+                    alt={selectedProject.name}
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                </div>
+              )}
+              <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">{selectedProject.name}</h3>
+            </div>
+
+            {/* Description */}
+            <p className="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-6 font-light">
+              {selectedProject.description}
+            </p>
+
+            {/* Tech Stack Badges */}
+            {selectedProject.techStack && (
+              <div className="mb-6">
+                <h4 className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 mb-2.5">// Technologies Used</h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {selectedProject.techStack.map((tech, tIdx) => (
+                    <span 
+                      key={tIdx} 
+                      className="px-2.5 py-1 bg-neutral-900 border border-white/10 rounded font-mono text-xs text-neutral-300"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Action Links */}
+            <div className="flex flex-wrap gap-2.5 pt-4 border-t border-white/10">
+              {selectedProject.links && selectedProject.links.map((link, lIdx) => (
+                <a
+                  key={lIdx}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 min-w-[120px] py-2.5 px-4 bg-white text-center text-black rounded-lg font-mono text-xs font-bold hover:bg-neutral-200 transition flex items-center justify-center gap-1.5"
+                >
+                  <span>{link.label}</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              ))}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="px-4 py-2.5 bg-neutral-900 text-neutral-300 rounded-lg font-mono text-xs hover:bg-neutral-800 transition border border-white/10"
+                className="px-5 py-2.5 bg-neutral-900 text-neutral-300 rounded-lg font-mono text-xs hover:bg-neutral-800 transition border border-white/10"
               >
                 Close
               </button>
