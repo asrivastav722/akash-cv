@@ -15,11 +15,11 @@ export const portfolioData = {
     mobileAndFrontend: [
       { title: "Frameworks & Core", list: ["React Native", "Expo (EAS CLI, Prebuild)", "Next.js", "React", "TypeScript", "JavaScript (ESNext)"], percentage: 80 },
       { title: "State Management & Data Flow", list: ["Redux Toolkit", "Context API", "React Query (TanStack Query)"], percentage: 80 },
-      { title: "Styling & UI Systems", list: ["Tailwind CSS", "NativeWind", "Styled Components", "Framer Motion", "CSS Modules"], percentage: 96 },
+      { title: "Styling & UI Systems", list: ["Tailwind CSS", "NativeWind", "Styled Components", "Framer Motion", "CSS Modules"], percentage: 80 },
       { title: "Performance & Optimization", list: ["Metro Bundler configuration", "Hermes engine optimization", "Lazy loading", "Memory leak profiling", "Image caching pipelines"], percentage: 90 },
-      { title: "Testing & Quality Assurance", list: ["Jest", "React Native Testing Library", "Detox (E2E testing)", "ESLint", "Prettier"], percentage: 88 },
+      { title: "Testing & Quality Assurance", list: [ "React Native Testing Library", "ESLint", "Prettier"], percentage: 80 },
       { title: "Native Integration", list: ["Native modules bridging", "Push notifications (FCM, Expo Notifications)", "Deep linking", "Secure local storage (EncryptedSharedPreferences / Keychain)"], percentage: 92 },
-      { title: "Deployment & Release Management", list: ["Google Play Console internal/closed testing tracks", "TestFlight", "Fastlane"], percentage: 94 }
+      { title: "Deployment & Release Management", list: ["Google Play Console internal/closed testing tracks"], percentage: 94 }
     ],
     systemsAndTools: [
       { title: "Device Debugging & Mirroring", list: ["Android Debug Bridge (ADB wireless & USB)", "scrcpy high-performance screen mirroring", "Logcat filtering", "PID process tracking"], percentage: 96 },
@@ -28,10 +28,8 @@ export const portfolioData = {
       { title: "Virtualization & Containers", list: ["Docker container workflows", "Android Virtual Devices (AVD Emulator)", "Genymotion profiles"], percentage: 88 }
     ],
     hardwareAndDiagnostics: [
-      { title: "Motherboard & Circuit Diagnostics", list: ["Multimeter DC voltage testing", "Continuity & resistance checking", "Backlight circuit troubleshooting", "Short-circuit tracing"], percentage: 92 },
-      { title: "Display & Flex Integration", list: ["Display driver circuit modification", "Universal LCD/LED controller board wiring", "Volume & power flex connector pin testing", "OLED/LCD ribbon diagnostics"], percentage: 95 },
-      { title: "Soldering & Micro-Repair", list: ["SMD component rework", "Hot air station reflowing", "Flex cable jumper wire bridging", "Precision connector pin cleaning"], percentage: 89 },
-      { title: "Hardware Testing Rigs", list: ["Bench power supply current limiting", "Thermal camera hotspot inspection", "Oscilloscope signal verification"], percentage: 86 }
+      { title: "Motherboard & Circuit Diagnostics", list: ["Multimeter testing", "Continuity & resistance checking", "Circuit troubleshooting", "Short-circuit tracing"], percentage: 92 },
+      { title: "Soldering & Micro-Repair", list: ["SMD component rework", "Hot air station reflowing", "Flex cable jumper wire bridging", "Precision connector pin cleaning"], percentage: 89 }
     ],
     backendAndWorkflow: [
       { title: "API Architecture & Integration", list: ["RESTful API design", "JSON payload parsing", "Axios interceptors", "Authentication tokens (JWT, OAuth)"], percentage: 94 },
@@ -46,7 +44,6 @@ export const portfolioData = {
         company: "Electrolyte Solutions and Ecosystem (Fixr and Aris)",
         location: "India / Remote",
         period: "Feb,2024  – Present",
-        ctc: "Varies (Entrepreneurial / Client Contracts)",
         employmentType: "Founder / Full-time",
         highlights: [
           "Founded and scaled a comprehensive IT enterprise delivering on-site hardware repairs, doorstep computer/laptop services, and end-to-end custom software and website development for clients.",

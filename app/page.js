@@ -165,8 +165,8 @@ export default function Portfolio() {
             {[
               { key: 'mobileAndFrontend', title: 'Mobile & Frontend', icon: Smartphone, items: skills.mobileAndFrontend },
               { key: 'systemsAndTools', title: 'Systems & Tools', icon: Terminal, items: skills.systemsAndTools },
-              { key: 'hardwareAndDiagnostics', title: 'Hardware & Diagnostics', icon: Wrench, items: skills.hardwareAndDiagnostics },
               { key: 'backendAndWorkflow', title: 'Backend & Workflow', icon: Cpu, items: skills.backendAndWorkflow },
+              { key: 'hardwareAndDiagnostics', title: 'Hardware & Diagnostics', icon: Wrench, items: skills.hardwareAndDiagnostics },
             ].map((cat, idx) => {
               const IconComp = cat.icon;
               return (
@@ -188,7 +188,7 @@ export default function Portfolio() {
                           </div>
                           
                           {/* Exact Vercel-style Circular Progress Ring */}
-                          <div className="relative w-12 h-12 flex-shrink-0 flex items-center justify-center">
+                          {/* <div className="relative w-12 h-12 flex-shrink-0 flex items-center justify-center">
                             <svg className="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                               <path
                                 className="text-neutral-900"
@@ -210,7 +210,7 @@ export default function Portfolio() {
                             <div className="absolute font-mono text-[10px] font-bold text-white">
                               {sub.percentage}%
                             </div>
-                          </div>
+                          </div> */}
                         </div>
                       ))}
                     </div>
