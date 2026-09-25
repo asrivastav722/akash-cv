@@ -1,3 +1,5 @@
+import { Cigarette } from "lucide-react";
+
 export const portfolioData = {
   personal: {
     name: "Akash",
@@ -64,7 +66,7 @@ export const portfolioData = {
     name: "Showstage App & Ecosystem",
     description: "An end-to-end creative talent marketplace connecting employers with artists and performers. Designed and engineered a multi-platform architecture comprising a native Android APK (WebView wrapper) distributed via the Google Play Store, a React-powered CMS admin dashboard, a dynamic React client application, a high-performance Next.js production marketing website, and a scalable Node.js backend handling user authentication, booking workflows, and media routing.",
     logoUrl: "https://www.showstage.in/favicon.svg",
-    techStack: ["React.js", "Next.js", "Node.js", "Express", "Tailwind CSS", "Google Play Console", "OAuth", "MongoDB","JWT","REST APIs","Bootstrap","Razorpay payment Intergration"],
+    techStack: ["React.js", "Next.js", "Node.js", "Express", "Tailwind CSS", "Google Play Console", "OAuth", "MongoDB","JWT","REST APIs","Bootstrap","Razorpay payment Integration ","CI/CD","Circle CI", "Github Actions","Redux"],
     links: [
       { label: "Website", url: "https://www.showstage.in" },
       { label: "App", url: "https://www.showstage.in" },
@@ -86,7 +88,7 @@ export const portfolioData = {
     name: "Fixr Service Marketplace App",
     description: "A robust cross-platform Android service marketplace built with React Native and Expo, connecting local technicians, skilled laborers, and maintenance workers with customers in real-time. Backed by a high-performance Node.js backend providing secure location-based job routing, automated push notifications, appointment scheduling, and user verification workflows.",
     logoUrl: "https://lh3.googleusercontent.com/30aKgB5jO-2F3v3I-7QX7DBaiSkPc_gI0ysRV0qaJkQaPb98A9B06a7PutXyHLGd_fSwDmk1X_zoDBQyqjllJA",
-    techStack: ["React Native", "Expo", "Node.js", "Express", "MongoDB", "FCM Push Notifications","Play Console","OAuth","Supabase","Firebase"],
+    techStack: ["React Native", "Expo", "Node.js", "Express", "MongoDB", "FCM Push Notifications","Play Console","OAuth","Supabase","Firebase","EAS-CLI","NativeWind","Redux","Supabase Hot-Updater","CI/CD","TypeScript","ADB","Mongoose","Twilio Integration"],
     links: [
       { label: "Visit Page", url: "https://fixr.electrolytesolutions.in" }
     ],
@@ -96,7 +98,7 @@ export const portfolioData = {
     name: "Electrolyte Solutions ERP & E-Commerce Suite",
     description: "A comprehensive, proprietary enterprise resource planning (ERP) and e-commerce ecosystem built for internal enterprise operations and digital sales. Features a custom full-stack administrative management portal, an advanced React Native mobile e-commerce client, and deeply integrated Shopify backend infrastructure handling automated inventory tracking, order processing, and customer relationship management.",
     logoUrl: "https://www.electrolytesolutions.in/Electrolyte.png",
-    techStack: ["React Native", "React.js", "Node.js", "Shopify API", "Tailwind CSS", "PostgreSQL"],
+    techStack: ["React Native", "React.js", "Node.js", "Node.js", "Shopify", "Tailwind CSS", "PostgreSQL","Google Play Console","Google Cloud Console","Supabase","CI/CD", "Self Hosted Home Server", "Docker","Domain Management","Vercel","NativeWind","ADB","Linux","Razorpay Payment Integration","Liquid - Shopify","SEO","Google Bussiness Setup", ],
     links: [
       { label: "Company Portal", url: "https://www.electrolytesolutions.in/Electrolyte.png" },
       { label: "Admin ERP", url: "https://admin.electrolytesolutions.com" }
