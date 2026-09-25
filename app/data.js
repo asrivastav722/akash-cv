@@ -41,7 +41,7 @@ export const portfolioData = {
   experience: [
     {
         role: "Founder & Lead IT Solutions Architect",
-        company: "Electrolyte Solutions and Ecosystem (Fixr and Aris)",
+        company: "Electrolyte Solutions and Ecosystem (Fixr and Aris-AI)",
         location: "India / Remote",
         period: "Feb,2024  – Present",
         employmentType: "Founder / Full-time",
