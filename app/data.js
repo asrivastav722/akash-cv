@@ -1,6 +1,6 @@
 export const portfolioData = {
   personal: {
-    name: "Akash Raj",
+    name: "Akash",
     title: "Software Engineer & Mobile Systems Specialist",
     location: "Remote / On-Site",
     email: "contact@developer.com",
@@ -60,29 +60,82 @@ export const portfolioData = {
     }
   ],
   projects: [
-    {
-      name: "Fixr App",
-      description: "Service marketplace Android app featuring real-time job routing and secure booking UI. Built with React Native & Expo."
-    },
-    {
-      name: "ElectroStore App",
-      description: "E-commerce Android client featuring local keystore signing and automated EAS release pipelines."
-    }
-  ],
+  {
+    name: "Showstage App & Ecosystem",
+    description: "An end-to-end creative talent marketplace connecting employers with artists and performers. Designed and engineered a multi-platform architecture comprising a native Android APK (WebView wrapper) distributed via the Google Play Store, a React-powered CMS admin dashboard, a dynamic React client application, a high-performance Next.js production marketing website, and a scalable Node.js backend handling user authentication, booking workflows, and media routing.",
+    logoUrl: "https://www.showstage.in/favicon.svg",
+    techStack: ["React.js", "Next.js", "Node.js", "Express", "Tailwind CSS", "Google Play Console", "OAuth", "MongoDB","JWT","REST APIs","Bootstrap","Razorpay payment Intergration"],
+    links: [
+      { label: "Website", url: "https://www.showstage.in" },
+      { label: "App", url: "https://www.showstage.in" },
+      { label: "Admin CMS", url: "https://www.showstage.in/admin" }
+    ],
+    status:"Completed"
+  },
+  {
+    name: "Go4Explore Travel Platform",
+    description: "A fully immersive, production-ready travel company web application designed for seamless destination discovery and itinerary planning. Built using Next.js with server-side rendering, optimized SEO architecture, dynamic routing, and an engaging responsive UI tailored for high conversion rates and fluid user experience.",
+    logoUrl: "https://go4explore.com/assets/img/faviconn.png",
+    techStack: ["Next.js", "Tailwind CSS", "REST APIs","SCSS","Bootstrap"],
+    links: [
+      { label: "Visit Page", url: "https://go4explore.com" }
+    ],
+    status:"Completed"
+  },
+  {
+    name: "Fixr Service Marketplace App",
+    description: "A robust cross-platform Android service marketplace built with React Native and Expo, connecting local technicians, skilled laborers, and maintenance workers with customers in real-time. Backed by a high-performance Node.js backend providing secure location-based job routing, automated push notifications, appointment scheduling, and user verification workflows.",
+    logoUrl: "https://lh3.googleusercontent.com/30aKgB5jO-2F3v3I-7QX7DBaiSkPc_gI0ysRV0qaJkQaPb98A9B06a7PutXyHLGd_fSwDmk1X_zoDBQyqjllJA",
+    techStack: ["React Native", "Expo", "Node.js", "Express", "MongoDB", "FCM Push Notifications","Play Console","OAuth","Supabase","Firebase"],
+    links: [
+      { label: "Visit Page", url: "https://fixr.electrolytesolutions.in" }
+    ],
+    status:"Ongoing"
+  },
+  {
+    name: "Electrolyte Solutions ERP & E-Commerce Suite",
+    description: "A comprehensive, proprietary enterprise resource planning (ERP) and e-commerce ecosystem built for internal enterprise operations and digital sales. Features a custom full-stack administrative management portal, an advanced React Native mobile e-commerce client, and deeply integrated Shopify backend infrastructure handling automated inventory tracking, order processing, and customer relationship management.",
+    logoUrl: "https://www.electrolytesolutions.in/Electrolyte.png",
+    techStack: ["React Native", "React.js", "Node.js", "Shopify API", "Tailwind CSS", "PostgreSQL"],
+    links: [
+      { label: "Company Portal", url: "https://www.electrolytesolutions.in/Electrolyte.png" },
+      { label: "Admin ERP", url: "https://admin.electrolytesolutions.com" }
+    ],
+    status:"Ongoing"
+  },
+  {
+    name: "ARIS AI Ecosystem & Device Gateway",
+    description: "An advanced real-time IoT and AI ecosystem connecting physical hardware devices with intelligent cloud backends. Engineered a high-performance Python client running on edge devices communicating via secure WebSockets, paired with a responsive web frontend client for live device telemetry, AI command dispatch, and real-time state synchronization.",
+    logoUrl: "/projects/aris.png",
+    techStack: ["Python", "WebSockets", "Node.js", "AI / LLM Integration", "React", "Next.js", "IoT Protocols"],
+    links: [
+      { label: "Live System", url: "https://aris-ai.com" },
+      { label: "Documentation", url: "https://docs.aris-ai.com" }
+    ],
+    status:"Ongoing"
+  }
+],
   education: [
     {
       degree: "B.Tech in Computer Science & Engineering",
-      institution: "University Institute of Engineering & Technology",
+      institution: "Babu Banarasi Das University, Lucknow",
       period: "2020 – 2024",
-      grade: "First Class with Distinction",
-      details: "Specialized in Software Engineering, Mobile Systems, and Embedded Hardware Integration. Active participant in coding clubs and hardware repair labs."
+      grade: "First Division with Hons",
+      details: "Comprehensive coursework including: Data Structures & Algorithms, Design & Analysis of Algorithms (DAA), Object-Oriented Programming (C++, Java, Python), Operating Systems, Database Management Systems (DBMS), Computer Networks (CN), Computer Organization & Architecture, Digital Logic Design, Discrete Mathematics / Engineering Mathematics III, Theory of Automata & Formal Languages (TOC), Compiler Design, Software Engineering, Web Development, Artificial Intelligence, Distributed Systems, and Cloud Computing."
     },
     {
-      degree: "Senior Secondary (PCM) & Technical Certification",
-      institution: "State Board & Advanced Training",
-      period: "2018 – 2020",
-      grade: "Percentage: 91%",
-      details: "Focused on Mathematics, Physics, and Computer Science foundation, alongside foundational electronics troubleshooting workshops."
+      degree: "Higher Secondary School / Senior Secondary School (PCM)",
+      institution: "Uttar Pradesh Madhyamik Shiksha Parishad",
+      period: "2017 – 2019",
+      grade: "First Division",
+      details: "Focused on Physics, Chemistry, and Mathematics (PCM) foundation, alongside foundational electronics troubleshooting workshops."
+    },
+    {
+      degree: "Secondary School",
+      institution: "Indian Certificate of Secondary Education Board",
+      period: "2014 – 2016",
+      grade: "First Division",
+      details: "Focused on Mathematics, Physics, Chemistry, and foundational Computer Applications."
     }
   ]
 };
