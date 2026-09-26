@@ -2,8 +2,8 @@ import { Cigarette } from "lucide-react";
 
 export const portfolioData = {
   personal: {
-    name: "Akash",
-    title: "Software Engineer & Mobile Systems Specialist",
+    name: "Akash Raj",
+    title: "Software Engineer & Hardware Specialist",
     location: "Remote / On-Site",
     email: "contact@developer.com",
     github: "github.com/akash",

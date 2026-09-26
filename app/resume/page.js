@@ -13,7 +13,7 @@ export default function ResumePage() {
   // Helper to format skill groups neatly
   const formatSkillsList = (skillCategory) => {
     if (!skillCategory || !Array.isArray(skillCategory)) return "";
-    return skillCategory.map(group => `${group.title}: ${group.list.join(", ")}`).join(" — ");
+    return skillCategory.map(group => <li className="ml-5 text-black"><span className="font-medium text-black">{group.title}: </span>{`${group.list.join(", ")}`}</li>);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function ResumePage() {
       <div className="max-w-3xl mx-auto mb-8 flex justify-between items-center print:hidden border-b border-neutral-200 pb-4">
         <a 
           href="/"
-          className="font-mono text-xs text-neutral-600 hover:text-black transition flex items-center gap-1.5"
+          className="font-mono text-xs text-black/50 hover:text-black transition flex items-center gap-1.5"
         >
           ← Back to Portfolio
         </a>
@@ -36,14 +36,14 @@ export default function ResumePage() {
       </div>
 
       {/* Vercel-Style Minimalist Resume Sheet */}
-      <div className="max-w-3xl mx-auto space-y-10 print:space-y-6">
+      <div className="max-w-3xl mx-auto space-y-4 print:space-y-4">
         
         {/* Header */}
         <div className="space-y-2 border-b border-neutral-200 pb-6">
-          <h1 className="text-3xl font-bold tracking-tight text-black">{personal.name}</h1>
-          <p className="font-mono text-xs text-neutral-600 uppercase tracking-widest">{personal.title}</p>
+          <h1 className="text-3xl font-semibold tracking-tight text-black">{personal.name}</h1>
+          <p className="font-mono text-xs text-black uppercase tracking-widest">{personal.title}</p>
           
-          <div className="flex flex-wrap gap-x-6 gap-y-1 pt-2 font-mono text-xs text-neutral-500">
+          <div className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-xs text-neutral-500">
             <span>{personal.location}</span>
             <span>{personal.email}</span>
             <a href={`https://${personal.github}`} target="_blank" rel="noreferrer" className="hover:text-black underline underline-offset-4">{personal.github}</a>
@@ -53,28 +53,36 @@ export default function ResumePage() {
 
         {/* Professional Summary */}
         <section className="space-y-2">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-neutral-400">// Summary</h2>
-          <p className="text-sm leading-relaxed text-neutral-800 font-light">
+          <h2 className="text-base tracking-wide text-black font-semibold">Summary</h2>
+          <p className="text-xs leading-4 text-neutral-800 font-light">
             {personal.summary}
           </p>
         </section>
 
         {/* Technical Expertise */}
         <section className="space-y-3">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-neutral-400">// Technical Expertise</h2>
-          <div className="space-y-2 text-xs text-neutral-700 font-light">
-            <div className="leading-relaxed"><strong className="text-black font-medium">Mobile & Frontend:</strong> {formatSkillsList(skills.mobileAndFrontend)}</div>
-            <div className="leading-relaxed"><strong className="text-black font-medium">Systems & Tools:</strong> {formatSkillsList(skills.systemsAndTools)}</div>
-            <div className="leading-relaxed"><strong className="text-black font-medium">Hardware & Diagnostics:</strong> {formatSkillsList(skills.hardwareAndDiagnostics)}</div>
-            <div className="leading-relaxed"><strong className="text-black font-medium">Backend & Workflow:</strong> {formatSkillsList(skills.backendAndWorkflow)}</div>
+          <h2 className="text-base tracking-wide text-black font-semibold">Technical Expertise</h2>
+          <div className="space-y-2 text-xs text-black font-light">
+            <ul className="leading-relaxed list-disc">
+              <strong className="text-black font-medium">Mobile & Frontend:</strong> {formatSkillsList(skills.mobileAndFrontend)}
+            </ul>
+            <ul className="leading-relaxed list-disc">
+              <strong className="text-black font-medium">Systems & Tools:</strong> {formatSkillsList(skills.systemsAndTools)}
+            </ul>
+            <ul className="leading-relaxed list-disc">
+              <strong className="text-black font-medium">Hardware & Diagnostics:</strong> {formatSkillsList(skills.hardwareAndDiagnostics)}
+            </ul>
+            <ul className="leading-relaxed list-disc">
+              <strong className="text-black font-medium">Backend & Workflow:</strong> {formatSkillsList(skills.backendAndWorkflow)}
+            </ul>
           </div>
         </section>
 
         {/* Professional Experience */}
-        <section className="space-y-6">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-neutral-400">// Experience</h2>
-          
-          <div className="space-y-8">
+        <section className="space-y-2">
+          <h2 className="text-base tracking-wide text-black font-semibold">Experience</h2>
+
+          <div className="space-y-2">
             {experience.map((exp, index) => (
               <div key={index} className="space-y-2 border-l border-neutral-200 pl-4">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
@@ -104,7 +112,7 @@ export default function ResumePage() {
 
         {/* Key Projects */}
         <section className="space-y-6">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-neutral-400">// Key Projects</h2>
+          <h2 className="text-base tracking-wide text-black font-semibold">Key Projects</h2>
           
           <div className="space-y-5">
             {projects.map((proj, index) => (
@@ -124,8 +132,8 @@ export default function ResumePage() {
 
         {/* Education */}
         <section className="space-y-6 pb-12">
-          <h2 className="font-mono text-xs uppercase tracking-widest text-neutral-400">// Education</h2>
-          
+          <h2 className="text-base tracking-wide text-black font-semibold">Education</h2>
+
           <div className="space-y-5">
             {education.map((edu, index) => (
               <div key={index} className="space-y-1 border-l border-neutral-200 pl-4">
