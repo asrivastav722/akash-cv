@@ -43,7 +43,7 @@ export const portfolioData = {
         role: "Founder & Lead IT Solutions Architect",
         company: "Electrolyte Solutions and Ecosystem (Fixr and Aris-AI)",
         location: "India / Remote",
-        period: "Feb,2024  – Present",
+        period: "Nov,2025  – Present",
         employmentType: "Founder / Full-time",
         highlights: [
           "Founded and scaled a comprehensive IT enterprise delivering on-site hardware repairs, doorstep computer/laptop services, and end-to-end custom software and website development for clients.",
@@ -57,7 +57,7 @@ export const portfolioData = {
       role: "Lead Software Engineer",
       company: "Cyberoze Pvt.Ltd. (Showstage)",
       location: "India (Hybrid / Remote)",
-      period: "June,24 – Feb,25",
+      period: "June,25 – Feb,26",
       ctc: "2.4 L",
       employmentType: "Full-time",
       highlights: [
@@ -158,7 +158,7 @@ export const portfolioData = {
       details: "Comprehensive coursework including: Data Structures & Algorithms, Design & Analysis of Algorithms (DAA), Object-Oriented Programming (C++, Java, Python), Operating Systems, Database Management Systems (DBMS), Computer Networks (CN), Computer Organization & Architecture, Digital Logic Design, Discrete Mathematics / Engineering Mathematics III, Theory of Automata & Formal Languages (TOC), Compiler Design, Software Engineering, Web Development, Artificial Intelligence, Distributed Systems, and Cloud Computing."
     },
     {
-      degree: "Higher Secondary School / Senior Secondary School (PCM)",
+      degree: "Higher Secondary School (PCM)",
       institution: "Uttar Pradesh Madhyamik Shiksha Parishad",
       period: "2017 – 2019",
       grade: "First Division",
