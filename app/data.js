@@ -8,7 +8,7 @@ export const portfolioData = {
     email: "contact@developer.com",
     github: "github.com/akash",
     linkedin: "linkedin.com/in/akash",
-    avatar: "/avatar.jpg",
+    avatar: "./avatar.jpg",
     summary: "Results-driven Software Engineer specializing in scalable mobile application development (React Native, Expo, Android), hardware-software integration, system automation, and high-performance production workflows. Experienced in leading closed testing pipelines, UI optimization, and modern web applications.",
   },
   skills: {

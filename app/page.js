@@ -135,12 +135,12 @@ export default function Portfolio() {
                 {/* Image Frame */}
                 <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/15 bg-neutral-950 shadow-2xl">
                   <img 
-                    src={personal.avatar || "/avatar.jpg"} 
+                    src= "./avatar.jpg"
                     alt={personal.name}
                     className="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition duration-700"
-                    onError={(e) => {
-                      e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
-                    }}
+                    // onError={(e) => {
+                    //   e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
+                    // }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                 </div>
