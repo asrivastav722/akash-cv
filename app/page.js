@@ -4,15 +4,16 @@ import React, { useState } from 'react';
 import { 
   Terminal, Code2, Smartphone, Cpu, Wrench, GitBranch, 
   Layers, Mail, Github, Linkedin, ExternalLink, Sparkles, 
-  FileText, Download, Menu, X, ChevronRight, CheckCircle2 
+  FileText, Download, Menu, X, ChevronRight, CheckCircle2, 
+  Phone
 } from 'lucide-react';
 import { portfolioData } from './data';
+import ContactSection from './sections/ContactSection';
 
 export default function Portfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
   const [contactSubmitted, setContactSubmitted] = useState(false);
-
   const { personal, skills, experience, projects } = portfolioData;
   const handleContactSubmit = (e) => {
     e.preventDefault();
@@ -417,72 +418,17 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 border-t border-white/10 bg-neutral-950/50">
-        <div className="max-w-2xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">// Connect</h2>
-            <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3">Get In Touch</h3>
-            <p className="text-neutral-400 text-sm font-light">Have an engineering project or role in mind? Send a dispatch.</p>
-          </div>
-
-          <div className="bg-black border border-white/10 rounded-2xl p-8 shadow-2xl">
-            {contactSubmitted ? (
-              <div className="py-12 text-center space-y-3">
-                <div className="w-12 h-12 bg-white/10 text-white rounded-full flex items-center justify-center mx-auto border border-white/20">
-                  <CheckCircle2 className="w-6 h-6" />
-                </div>
-                <h4 className="font-bold text-white text-base">Transmission Successful</h4>
-                <p className="text-neutral-400 text-xs font-mono">Thank you for reaching out. I'll get back to you shortly.</p>
-              </div>
-            ) : (
-              <form onSubmit={handleContactSubmit} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block font-mono text-[10px] text-neutral-400 uppercase tracking-wider mb-1.5">Name</label>
-                    <input 
-                      type="text" 
-                      required
-                      placeholder="Jane Doe"
-                      className="w-full bg-neutral-950 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-white transition"
-                    />
-                  </div>
-                  <div>
-                    <label className="block font-mono text-[10px] text-neutral-400 uppercase tracking-wider mb-1.5">Email</label>
-                    <input 
-                      type="email" 
-                      required
-                      placeholder="jane@example.com"
-                      className="w-full bg-neutral-950 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-white transition"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block font-mono text-[10px] text-neutral-400 uppercase tracking-wider mb-1.5">Message</label>
-                  <textarea 
-                    rows={4}
-                    required
-                    placeholder="Project details or inquiry..."
-                    className="w-full bg-neutral-950 border border-white/10 rounded-lg px-3.5 py-2.5 text-xs text-white placeholder-neutral-600 focus:outline-none focus:border-white transition"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-3 bg-white hover:bg-neutral-200 text-black rounded-lg font-mono text-xs font-bold transition flex items-center justify-center gap-2 shadow-md"
-                >
-                  <Mail className="w-3.5 h-3.5" />
-                  <span>Send Message</span>
-                </button>
-              </form>
-            )}
-          </div>
-        </div>
-      </section>
+      <ContactSection/>
 
       {/* Footer */}
       <footer className="bg-black border-t border-white/10 py-12">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-neutral-500">
           <p>© {new Date().getFullYear()} {personal.name}. All rights reserved.</p>
           <div className="flex items-center gap-6">
+            <a href={`tel:${personal.phone}`} className="hover:text-white transition flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5" />
+              <span>Phone</span>
+            </a>
             <a href={`https://${personal.github}`} target="_blank" className="hover:text-white transition flex items-center gap-1.5">
               <Github className="w-3.5 h-3.5" />
               <span>GitHub</span>

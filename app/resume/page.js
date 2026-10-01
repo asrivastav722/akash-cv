@@ -37,28 +37,25 @@ export default function ResumePage() {
       </div>
 
       {/* Vercel-Style Minimalist Resume Sheet */}
-      <div className="max-w-3xl mx-auto space-y-3 print:space-y-3">
+      <div className="max-w-3xl mx-auto space-y-2">
         
         {/* Header */}
-        <div className="border-b border-neutral-200 pb-3">
-          <h1 className="text-3xl font-semibold tracking-tight text-black">{personal.name}</h1>
+        <div className="border-b border-neutral-200 pb-2">
+          <h1 className="text-2xl font-semibold tracking-tight text-black">{personal.name}</h1>
           <p className="font-mono text-[10px] text-black uppercase tracking-widest">{personal.title}</p>
           
           <div className="flex flex-wrap gap-x-2 gap-y-1 font-mono text-[10px] text-neutral-500 pt-1">
             <span>{personal.location} |</span>
             <span>{personal.email} |</span>
+            <a href={`tel:${personal.phone}`} className="hover:text-white transition flex items-center gap-1.5">
+              +91-{personal.phone} |
+            </a>
             <a href={`https://${personal.github}`} target="_blank" rel="noreferrer" className="hover:text-black underline underline-offset-4">GitHub </a> |
             <a href={`https://${personal.linkedin}`} target="_blank" rel="noreferrer" className="hover:text-black underline underline-offset-4">LinkedIn</a>
           </div>
         </div>
 
-        {/* Professional Summary */}
-        <section className="space-y-2">
-          <h2 className="text-xs uppercase text-black font-bold">Summary</h2>
-          <p className="text-[10px] leading-4 text-neutral-800 font-light">
-            {personal.summary}
-          </p>
-        </section>
+     
 
         {/* Technical Expertise */}
         <section className="space-y-1">
@@ -96,8 +93,9 @@ export default function ResumePage() {
                 <ul className="space-y-1 pt-1 text-[10px] text-neutral-700 font-light">
                   {exp.highlights.map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-neutral-600 mt-0.5">›</span>
-                      <span className="leading-relaxed">{item}</span>
+                      <span className="text-neutral-600 ">›</span>
+                      {/* <span className="leading-relaxed">{item}</span> */}
+                      <span className="">{item}</span>
                     </li>
                   ))}
                 </ul>
