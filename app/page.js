@@ -14,13 +14,13 @@ export default function Portfolio() {
   const [contactSubmitted, setContactSubmitted] = useState(false);
 
   const { personal, skills, experience, projects } = portfolioData;
-
   const handleContactSubmit = (e) => {
     e.preventDefault();
     setContactSubmitted(true);
     setTimeout(() => setContactSubmitted(false), 5000);
     e.target.reset();
   };
+
 
   return (
     <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans antialiased">
@@ -130,17 +130,17 @@ export default function Portfolio() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="relative w-64 h-64 sm:w-80 sm:h-80">
                 {/* Opacity-50 background ambient spotlight */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/20 to-neutral-500/20 opacity-50 blur-2xl transform scale-105 pointer-events-none" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/20 to-neutral-500/20 opacity-50 blur-2xl transform scale-105 pointer-events-none" />
                 
                 {/* Image Frame */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/15 bg-neutral-950 shadow-2xl">
+                <div className="relative w-full h-full rounded-full overflow-hidden border border-white/15 bg-neutral-950 shadow-2xl">
                   <img 
-                    src= "./avatar.jpg"
+                    src= {personal.avatar}
                     alt={personal.name}
-                    className="w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 transition duration-700"
-                    // onError={(e) => {
-                    //   e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
-                    // }}
+                    className="opacity-50 w-full h-full object-cover filter grayscale contrast-125 hover:grayscale-0 hover:opacity-100 transition duration-700"
+                    onError={(e) => {
+                      e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80";
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
                 </div>

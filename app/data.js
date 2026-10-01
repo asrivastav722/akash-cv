@@ -1,4 +1,5 @@
 import { Cigarette } from "lucide-react";
+import avatar from "./avatar.jpg"
 
 export const portfolioData = {
   personal: {
@@ -8,7 +9,7 @@ export const portfolioData = {
     email: "contact@developer.com",
     github: "github.com/akash",
     linkedin: "linkedin.com/in/akash",
-    avatar: "./avatar.jpg",
+    avatar: avatar.src,
     summary: "Results-driven Software Engineer specializing in scalable mobile application development (React Native, Expo, Android), hardware-software integration, system automation, and high-performance production workflows. Experienced in leading closed testing pipelines, UI optimization, and modern web applications.",
   },
   skills: {
@@ -81,6 +82,31 @@ export const portfolioData = {
       ]
     },
     {
+      role: "Web Development Intern",
+      company: "Independent / Virtual Training",
+      location: "Remote",
+      period: "Jan,2024 – Mar,2024",
+      employmentType: "Internship",
+      highlights: [
+        "Developed a fully responsive Airport Landing Page utilizing vanilla HTML5, modern CSS3, and JavaScript (ES6+), focusing on clean UI layout, cross-browser compatibility, and fast load times.",
+        "Implemented interactive flight schedule search filters, dynamic countdown timers, and accessible navigation menus to enhance user experience.",
+        "Optimized DOM manipulation and asset loading performance following modern web standards and accessibility guidelines."
+      ]
+    },
+    {
+      role: "Android Development Intern",
+      company: "NullClasses",
+      location: "Remote",
+      period: "Oct,2023 – Dec,2023",
+      employmentType: "Internship",
+
+      highlights: [
+        "Engineered a feature-rich WhatsApp Clone Android application focusing on real-time messaging workflows and intuitive mobile UI design.",
+        "Implemented RecyclerView adapters, fragment navigation, custom chat bubble layouts, and media attachment handlers mimicking core messenger functionality.",
+        "Integrated local SQLite database / Firebase structured storage for persistent chat history and managed state transitions across activity lifecycles."
+      ]
+    },
+    {
       role: "Independent Freelance Software & Hardware Engineer",
       company: "Freelance / Contract",
       location: "Remote / On-Site",
@@ -95,35 +121,14 @@ export const portfolioData = {
   ],
   projects: [
   {
-    name: "Showstage App & Ecosystem",
-    description: "An end-to-end creative talent marketplace connecting employers with artists and performers. Designed and engineered a multi-platform architecture comprising a native Android APK (WebView wrapper) distributed via the Google Play Store, a React-powered CMS admin dashboard, a dynamic React client application, a high-performance Next.js production marketing website, and a scalable Node.js backend handling user authentication, booking workflows, and media routing.",
-    logoUrl: "https://www.showstage.in/favicon.svg",
-    techStack: ["React.js", "Next.js", "Node.js", "Express", "Tailwind CSS", "Google Play Console", "OAuth", "MongoDB","JWT","REST APIs","Bootstrap","Razorpay payment Integration ","CI/CD","Circle CI", "Github Actions","Redux"],
-    links: [
-      { label: "Website", url: "https://www.showstage.in" },
-      { label: "App", url: "https://www.showstage.in" },
-      { label: "Admin CMS", url: "https://www.showstage.in/admin" }
-    ],
-    status:"Completed"
-  },
-  {
-    name: "Go4Explore Travel Platform",
-    description: "A fully immersive, production-ready travel company web application designed for seamless destination discovery and itinerary planning. Built using Next.js with server-side rendering, optimized SEO architecture, dynamic routing, and an engaging responsive UI tailored for high conversion rates and fluid user experience.",
-    logoUrl: "https://go4explore.com/assets/img/faviconn.png",
-    techStack: ["Next.js", "Tailwind CSS", "REST APIs","SCSS","Bootstrap"],
-    links: [
-      { label: "Visit Page", url: "https://go4explore.com" }
-    ],
-    status:"Completed"
-  },
-  {
-    name: "Fixr Service Marketplace App",
-    description: "A robust cross-platform Android service marketplace built with React Native and Expo, connecting local technicians, skilled laborers, and maintenance workers with customers in real-time. Backed by a high-performance Node.js backend providing secure location-based job routing, automated push notifications, appointment scheduling, and user verification workflows.",
-    logoUrl: "https://lh3.googleusercontent.com/30aKgB5jO-2F3v3I-7QX7DBaiSkPc_gI0ysRV0qaJkQaPb98A9B06a7PutXyHLGd_fSwDmk1X_zoDBQyqjllJA",
-    techStack: ["React Native", "Expo", "Node.js", "Express", "MongoDB", "FCM Push Notifications","Play Console","OAuth","Supabase","Firebase","EAS-CLI","NativeWind","Redux","Supabase Hot-Updater","CI/CD","TypeScript","ADB","Mongoose","Twilio Integration"],
-    links: [
-      { label: "Visit Page", url: "https://fixr.electrolytesolutions.in" }
-    ],
+    name: "ARIS AI Ecosystem & Device Gateway",
+    description: "An advanced real-time IoT and AI ecosystem connecting physical hardware devices with intelligent cloud backends. Engineered a high-performance Python client running on edge devices communicating via secure WebSockets, paired with a responsive web frontend client for live device telemetry, AI command dispatch, and real-time state synchronization.",
+    logoUrl: "/projects/aris.png",
+    techStack: ["GORK-SDK","Python", "WebSockets", "Node.js", "AI / LLM Integration", "React", "Next.js", "IoT Protocols","Mongoose","SSL","OS","llama-3.3-70b-versatile"],
+    // links: [
+    //   { label: "Live System", url: "https://aris-ai.com" },
+    //   { label: "Documentation", url: "https://docs.aris-ai.com" }
+    // ],
     status:"Ongoing"
   },
   {
@@ -138,16 +143,40 @@ export const portfolioData = {
     status:"Ongoing"
   },
   {
-    name: "ARIS AI Ecosystem & Device Gateway",
-    description: "An advanced real-time IoT and AI ecosystem connecting physical hardware devices with intelligent cloud backends. Engineered a high-performance Python client running on edge devices communicating via secure WebSockets, paired with a responsive web frontend client for live device telemetry, AI command dispatch, and real-time state synchronization.",
-    logoUrl: "/projects/aris.png",
-    techStack: ["GORK-SDK","Python", "WebSockets", "Node.js", "AI / LLM Integration", "React", "Next.js", "IoT Protocols","Mongoose","SSL","OS","llama-3.3-70b-versatile"],
-    // links: [
-    //   { label: "Live System", url: "https://aris-ai.com" },
-    //   { label: "Documentation", url: "https://docs.aris-ai.com" }
-    // ],
+    name: "Fixr Service Marketplace App",
+    description: "A robust cross-platform Android service marketplace built with React Native and Expo, connecting local technicians, skilled laborers, and maintenance workers with customers in real-time. Backed by a high-performance Node.js backend providing secure location-based job routing, automated push notifications, appointment scheduling, and user verification workflows.",
+    logoUrl: "https://lh3.googleusercontent.com/30aKgB5jO-2F3v3I-7QX7DBaiSkPc_gI0ysRV0qaJkQaPb98A9B06a7PutXyHLGd_fSwDmk1X_zoDBQyqjllJA",
+    techStack: ["React Native", "Expo", "Node.js", "Express", "MongoDB", "FCM Push Notifications","Play Console","OAuth","Supabase","Firebase","EAS-CLI","NativeWind","Redux","Supabase Hot-Updater","CI/CD","TypeScript","ADB","Mongoose","Twilio Integration"],
+    links: [
+      { label: "Visit Page", url: "https://fixr.electrolytesolutions.in" }
+    ],
     status:"Ongoing"
+  },
+  {
+    name: "Go4Explore Travel Platform",
+    description: "A fully immersive, production-ready travel company web application designed for seamless destination discovery and itinerary planning. Built using Next.js with server-side rendering, optimized SEO architecture, dynamic routing, and an engaging responsive UI tailored for high conversion rates and fluid user experience.",
+    logoUrl: "https://go4explore.com/assets/img/faviconn.png",
+    techStack: ["Next.js", "Tailwind CSS", "REST APIs","SCSS","Bootstrap"],
+    links: [
+      { label: "Visit Page", url: "https://go4explore.com" }
+    ],
+    status:"Completed"
+  },
+  {
+    name: "Showstage App & Ecosystem",
+    description: "An end-to-end creative talent marketplace connecting employers with artists and performers. Designed and engineered a multi-platform architecture comprising a native Android APK (WebView wrapper) distributed via the Google Play Store, a React-powered CMS admin dashboard, a dynamic React client application, a high-performance Next.js production marketing website, and a scalable Node.js backend handling user authentication, booking workflows, and media routing.",
+    logoUrl: "https://www.showstage.in/favicon.svg",
+    techStack: ["React.js", "Next.js", "Node.js", "Express", "Tailwind CSS", "Google Play Console", "OAuth", "MongoDB","JWT","REST APIs","Bootstrap","Razorpay payment Integration ","CI/CD","Circle CI", "Github Actions","Redux"],
+    links: [
+      { label: "Website", url: "https://www.showstage.in" },
+      { label: "App", url: "https://www.showstage.in" },
+      { label: "Admin CMS", url: "https://www.showstage.in/admin" }
+    ],
+    status:"Completed"
   }
+  
+  
+  
 ],
   education: [
     {

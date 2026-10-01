@@ -1,5 +1,6 @@
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import favicon from "./favicon.png";
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -14,6 +15,16 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: 'Akash — Software Engineer Portfolio',
   description: 'Software Engineer & Mobile Systems Specialist Portfolio',
+  icons: {
+    icon: favicon.src,
+  },
+  openGraph: {
+    images: [
+      {
+        url: favicon.src,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
